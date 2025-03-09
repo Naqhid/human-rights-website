@@ -1,108 +1,91 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Contact | Human Rights Organization</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-  </head>
-  <body class="bg-gray-100 text-gray-900 min-h-screen flex flex-col">
-    <!-- Navigation -->
-    <div id="navbar-container"></div>
+<!-- Common Navbar -->
+<nav class="bg-blue-600 text-white p-4">
+  <div class="container flex justify-between items-center">
+    <!-- Logo and Site Name -->
+    <div class="flex items-center space-x-4">
+      <div class="flex justify-center">
+        <img
+          src="assets/logo.jpeg"
+          alt="Human Rights Logo"
+          class="w-full max-w-[12rem] md:max-w-[10rem] sm:max-w-[8rem] xs:max-w-[6rem]"
+        />
+      </div>
 
-    <!-- Main Content -->
-    <div class="flex-grow">
-      <!-- Contact Section -->
-      <section class="container mx-auto px-6 py-12">
-        <h1 class="text-4xl font-bold text-center text-gray-900">Contact Us</h1>
-        <p class="mt-4 text-lg text-center text-gray-700">
-          Get in touch with us for any inquiries, support, or collaboration.
-        </p>
-
-        <!-- Contact Cards -->
-        <div class="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <!-- Email Contact -->
-          <div class="bg-white p-6 rounded-lg shadow-md text-center">
-            <div class="text-5xl text-red-500">📧</div>
-            <h3 class="text-2xl font-semibold text-gray-900 mt-4">Email</h3>
-            <p class="mt-2 text-gray-700">Reach us at:</p>
-            <a
-              href="mailto:aihroeaglei0@gmail.com"
-              class="mt-1 text-blue-500 hover:underline"
-            >
-              aihroeaglei0@gmail.com
-            </a>
-          </div>
-
-          <!-- Phone Contact -->
-          <div class="bg-white p-6 rounded-lg shadow-md text-center">
-            <div class="text-5xl text-green-500">📞</div>
-            <h3 class="text-2xl font-semibold text-gray-900 mt-4">Phone</h3>
-            <p class="mt-2 text-gray-700">Call us:</p>
-            <p class="mt-1 text-lg font-semibold text-gray-800">
-              +91 7338609166
-            </p>
-          </div>
-
-          <!-- Address -->
-          <div class="bg-white p-6 rounded-lg shadow-md text-center">
-            <div class="text-5xl text-purple-500">📍</div>
-            <h3 class="text-2xl font-semibold text-gray-900 mt-4">
-              Head Office
-            </h3>
-            <p class="mt-2 text-gray-700">
-              1st Floor, Venkateshappa Complex,<br />
-              Rachenahalli Main Rd, near Govt. High School,<br />
-              Dr.S.R.K. Nagar Post, Anjanadri Layout,<br />
-              Thanisandra, Bengaluru, Karnataka 560077
-            </p>
-          </div>
-        </div>
-
-        <!-- Contact Form -->
-        <div class="mt-12 bg-white p-8 rounded-lg shadow-lg max-w-2xl mx-auto">
-          <h2 class="text-2xl font-bold text-gray-900 text-center mb-4">
-            Send Us a Message
-          </h2>
-          <form action="mailto:aihroeaglei0@gmail.com" method="GET">
-            <div class="mb-4">
-              <label class="block text-gray-700 mb-2">Full Name</label>
-              <input
-                type="text"
-                name="subject"
-                class="w-full px-4 py-2 border rounded-lg focus:ring focus:ring-blue-300"
-                placeholder="Your Name"
-                required
-              />
-            </div>
-            <div class="mb-4">
-              <label class="block text-gray-700 mb-2">Message</label>
-              <textarea
-                name="body"
-                class="w-full px-4 py-2 border rounded-lg focus:ring focus:ring-blue-300"
-                rows="4"
-                placeholder="Your Message"
-                required
-              ></textarea>
-            </div>
-            <button
-              type="submit"
-              class="w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition"
-            >
-              Send Message
-            </button>
-          </form>
-        </div>
-      </section>
+      <a
+        href="index.html"
+        class="font-bold text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl text-center leading-tight"
+      >
+        ALL INDIA HUMAN RIGHTS ORGANIZATION EAGLE
+      </a>
     </div>
 
-    <!-- Footer (Loaded Dynamically) -->
-    <div id="footer-container">
-      <p class="text-center text-gray-500">Loading footer...</p>
-    </div>
+    <!-- Hamburger Menu Button (Mobile) -->
+    <button
+      id="menu-btn"
+      class="md:hidden block text-black-800 focus:outline-none"
+    >
+      <svg
+        class="w-8 h-8"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        viewBox="0 0 24 24"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke="black"
+          d="M4 6h16M4 12h16m-7 6h7"
+        ></path>
+      </svg>
+    </button>
 
-    <!-- Load Navbar & Footer -->
-    <script src="js/navbar.js"></script>
-    <script src="js/footer.js"></script>
-  </body>
-</html>
+    <!-- Desktop Menu (Visible on larger screens) -->
+    <div id="menu" class="hidden md:flex space-x-6">
+      <a href="index.html" class="hover:text-gray-300 transition">Home</a>
+      <a href="about.html" class="hover:text-gray-300 transition">About Us</a>
+      <a href="leaders.html" class="hover:text-gray-300 transition"
+        >Our Leaders</a
+      >
+      <a href="albums.html" class="hover:text-gray-300 transition"
+        >Our Albums</a
+      >
+      <a href="contact.html" class="hover:text-gray-300 transition"
+        >Contact Us</a
+      >
+    </div>
+  </div>
+</nav>
+
+<!-- Mobile Menu (Hidden by default) -->
+<div
+  id="mobile-menu"
+  class="hidden bg-blue-700 text-white p-4 md:hidden space-y-3"
+>
+  <a
+    href="index.html"
+    class="block py-2 hover:bg-blue-800 rounded-md px-4 transition"
+    >Home</a
+  >
+  <a
+    href="about.html"
+    class="block py-2 hover:bg-blue-800 rounded-md px-4 transition"
+    >About Us</a
+  >
+  <a
+    href="leaders.html"
+    class="block py-2 hover:bg-blue-800 rounded-md px-4 transition"
+    >Our Leaders</a
+  >
+  <a
+    href="albums.html"
+    class="block py-2 hover:bg-blue-800 rounded-md px-4 transition"
+    >Our Albums</a
+  >
+  <a
+    href="contact.html"
+    class="block py-2 hover:bg-blue-800 rounded-md px-4 transition"
+    >Contact Us</a
+  >
+</div>
